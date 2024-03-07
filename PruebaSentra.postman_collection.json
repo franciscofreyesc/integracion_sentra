@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "d3d4c9f6-dced-467b-8be1-d9dd14d677bc",
+		"name": "PruebaSentra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11738873"
+	},
+	"item": [
+		{
+			"name": "POST_registroUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcmFuY2lzY29AbWFpbC5jbCIsImV4cCI6MTcxMjQxNjY0OCwibm9tYnJlIjoiRnJhbmNpc2NvIn0.TkxFKV6qmNzpxDroUEVzL4yXqrZnSEwywRSPb9LKELaIf4cSrNS3Wi19eYfXHhFwVtszWB8Qdf26pG7ILSZguQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Superman Segura\",\r\n    \"email\": \"superman@mail.cl\",\r\n    \"password\": \"Clavee55\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"654832928\",\r\n            \"citycode\": \"2\",\r\n            \"countrycode\": \"13\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/registroUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registroUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_obtenerUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcmFuY2lzY29AbWFpbC5jbCIsImV4cCI6MTcxMjQxNjY0OCwibm9tYnJlIjoiRnJhbmNpc2NvIn0.TkxFKV6qmNzpxDroUEVzL4yXqrZnSEwywRSPb9LKELaIf4cSrNS3Wi19eYfXHhFwVtszWB8Qdf26pG7ILSZguQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/obtenerUsuario/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"obtenerUsuario",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"francisco@mail.cl\",\r\n    \"pass\" : \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
